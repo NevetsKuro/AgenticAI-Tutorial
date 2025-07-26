@@ -30,9 +30,9 @@ triage_agent = Agent(
     handoffs=[history_tutor_agent, math_tutor_agent]
 )
 
-async def main():
+async def tri_agent_main():
     result = await Runner.run(triage_agent, "What is the capital of France?")
     print(result.final_output)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(tri_agent_main())
